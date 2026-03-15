@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="cl_contact_inherit_form_view" model="ir.ui.view">
+        <field name="name">cl.contact.inherit.form.view</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form[1]/sheet[1]/group[1]/group[2]/field[@name='function']" position="before">
+                <field name="business_partner_code" />
+                <field name="business_partner_type" />
+                <field name="business_partner_group" />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

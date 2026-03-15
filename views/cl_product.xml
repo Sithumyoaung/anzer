@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="cl_product_inherit_form_view" model="ir.ui.view">
+        <field name="name">cl.product.inherit.form.view</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='general_information']" position="after">
+                <page name="cl_asset_line" string="Accessories">
+                    <field name="asset_line_ids" nolabel="1">
+                        <list editable="top">
+                            <field name="asset_id"></field>
+                            <field name="product_qty" />
+                        </list>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

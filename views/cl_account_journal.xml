@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="cl_account_journal_inherit_form_view" model="ir.ui.view">
+        <field name="name">cl.account.journal.inherit.form.view</field>
+        <field name="model">account.journal</field>
+        <field name="inherit_id" ref="account.view_account_journal_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='bank_account']" position="after">
+                <page name="anzer_information" string="Anzer Information">
+                    <group>
+                        <group name="anzer_mapping_info" string="Anzer Mapping Information">
+                            <field name="anzer_id" />
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

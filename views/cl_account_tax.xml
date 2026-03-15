@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="cl_account_tax_inherit_form_view" model="ir.ui.view">
+        <field name="name">cl.account.tax.inherit.form.view</field>
+        <field name="model">account.tax</field>
+        <field name="inherit_id" ref="account.view_tax_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form[1]/sheet[1]/group[1]" position="after">
+                <group name="anzer_info">
+                    <group name="anzer_general_info" string="ANZER INFORMATION">
+                        <field name="anzer_tax_code" />
+                    </group>
+                    <group>
+
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

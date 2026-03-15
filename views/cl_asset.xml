@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="cl_asset_inherit_form_view" model="ir.ui.view">
+        <field name="name">cl.asset.inherit.form.view</field>
+        <field name="model">account.asset</field>
+        <field name="inherit_id" ref="account_asset.view_account_asset_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='related_items']" position="after">
+                <page name="cl_asset_line" string="Accessories">
+                    <field name="asset_line_ids" nolabel="1">
+                        <list editable="top">
+                            <field name="product_id" />
+                            <field name="product_code_id" />
+                            <field name="product_bar_code_id" />
+                            <field name="product_qty" />
+                            <field name="product_cost_id" />
+                        </list>
+                    </field>
+                </page>
+            </xpath>
+
+            <xpath expr="//form[1]/sheet[1]/notebook[1]/page[1]/group[1]" position="before">
+                <group name="cl_information">
+                    <group name="cl_department_information" string="Department">
+                        <field name="department_info" widget="many2many_tags" options="{'color_field': 'color'}"/>
+                    </group>
+                    <group>
+
+                    </group>
+                </group>
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>

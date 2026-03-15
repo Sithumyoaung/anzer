@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="department_root_menu_id" name="Department" parent="account.menu_finance_configuration" sequence="50"/>
+    <menuitem id="department_menu_id" name="Department" action="department_config_action_id" parent="department_root_menu_id" sequence="10"/>
+
+    <menuitem id="integration_account_code_root_menu_id" name="Mapping Code" parent="account.menu_finance_configuration" sequence="60"/>
+    <menuitem id="integration_account_code_menu_id" name="Mapping Code" action="mapping_config_action_id" parent="integration_account_code_root_menu_id" sequence="10"/>
+    <menuitem id="mapping_integration_line_menu_id" name="Mapping Integration Line" action="mapping_integration_line_config_action_id" parent="integration_account_code_root_menu_id" sequence="15"/>
+
+
+</odoo>

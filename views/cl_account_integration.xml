@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="cl_account_integration_list_view" model="ir.ui.view">
+        <field name="name">cl.account.integration.list.view</field>
+        <field name="model">cl.account.integration</field>
+        <field name="arch" type="xml">
+            <list string="Cherry Land Account Integration list View">
+                <field name="code" />
+                <field name="name" />
+            </list>
+        </field>
+    </record>
+
+    <record id="cl_account_integration_form_view" model="ir.ui.view">
+        <field name="name">cl.account.integration.form.view</field>
+        <field name="model">cl.account.integration</field>
+        <field name="arch" type="xml">
+            <form string="Cherry Land Account Integration Form View">
+                <sheet>
+                    <group>
+                        <group name="mapping information" string="Mapping Information">
+                            <field name="code" required="1"/>
+                            <field name="name" />
+                        </group>
+                        <group>
+
+                        </group>
+                    </group>
+
+                    <notebook>
+                        <page name="cl_account_lines" string="Account Lines">
+                            <field name="anzer_account_ids" nolabel="1">
+                                <list editable="top">
+                                    <field name="account_id" />
+                                    <field name="account_name_id" />
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

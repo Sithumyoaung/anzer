@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="cl_account_move_inherit_form_view" model="ir.ui.view">
+        <field name="name">cl.account.move.inherit.form.view</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form[1]/sheet[1]/group[1]" position="after">
+                <group name="anzer_info">
+                    <group name="anzer_general_info" string="ANZER INFORMATION">
+                        <field name="anzer_id" />
+                        <field name="vendor_ref" />
+                        <field name="anzer_bill_type" />
+                    </group>
+                    <group>
+
+                    </group>
+                </group>
+            </xpath>
+
+            <xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='invoice_tab']/field[@name='invoice_line_ids']/list[1]/field[@name='price_subtotal']" position="after">
+            
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

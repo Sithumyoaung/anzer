@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="cl_account_account_inherit_form_view" model="ir.ui.view">
+        <field name="name">cl.account.account.inherit.form.view</field>
+        <field name="model">account.account</field>
+        <field name="inherit_id" ref="account.view_account_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='accounting']/group[1]" position="after">
+                <group name="anzer_info">
+                    <group name="anzer_general_info" string="ANZER INFORMATION">
+                        <field name="anzer_account_code" widget="many2many_tags" invisible="1"/>
+                        <field name="anzer_analytic_account" />
+                    </group>
+                    <group>
+
+                    </group>
+                </group>
+
+                <field name="anzer_mapping_ids" nolabel="1">
+                    <list editable="top">
+                        <field name="mapping_code_id" />
+                        <field name="mapping_name_id" />
+                    </list>
+                </field>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_cl_asset_lines,Access Cherry Land Asset Lines,model_cl_asset_line,base.group_user,1,1,1,1
+access_cl_department,Access Cherry Land Department,model_cl_department,base.group_user,1,1,1,1
+access_cl_account_integration,Access Cherry Land Account Integration,model_cl_account_integration,base.group_user,1,1,1,1
+access_cl_account_integration_line, Access Cherry Land Account Integration Line,model_cl_account_integration_line,base.group_user,1,1,1,1
