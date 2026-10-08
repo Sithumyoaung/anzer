@@ -10,6 +10,8 @@ class CLAccountIntegrationLine(models.Model):
         'account.account', string="Account Code")
     mapping_code_id = fields.Many2one(
         'cl.account.integration', string="Mapping Code")
+    analytic_account_id = fields.Many2one(
+        'account.analytic.account', string="Analytic Account")
     account_name_id = fields.Char(
         string="Account Name", related='account_id.name')
     mapping_name_id = fields.Char(

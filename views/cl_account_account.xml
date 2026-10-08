@@ -21,6 +21,7 @@
                     <list editable="top">
                         <field name="mapping_code_id" />
                         <field name="mapping_name_id" />
+                        <field name="analytic_account_id" />
                     </list>
                 </field>
             </xpath>
