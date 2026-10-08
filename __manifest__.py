@@ -50,7 +50,7 @@ Website: https://gtsolutionsmyanmar.com
     'website': 'https://gtsolutionsmyanmar.com',
 
     'category': 'Accounting/Accounting',
-    'version': '0.1',
+    'version': '0.2',
     'license': 'LGPL-3',
 
     'depends': [
